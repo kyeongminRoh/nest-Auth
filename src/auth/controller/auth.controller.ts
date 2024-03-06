@@ -9,7 +9,7 @@ export class AuthController {
 
     @Post('/signup')
     async signup(@Body() createSignupDto : CreateSignupDto) : Promise<SignupResDto> {
-        const authSignup = await this.authService.createSignupDto(createSignupDto);
+        const authSignup = await this.authService.createSignup(createSignupDto);
         return {
             id: authSignup.id,
             name: authSignup.name,
